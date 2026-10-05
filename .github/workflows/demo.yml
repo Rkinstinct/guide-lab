@@ -1,0 +1,9 @@
+name: Demo
+on: [push]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: echo "Branch is ${{ github.ref }}"
+      - run: ls -la
